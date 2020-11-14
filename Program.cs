@@ -6,12 +6,12 @@ namespace DataStructuresAndAlgorithms
     {
         static void Main(string[] args)
         {
-            ArraySorter sorter = new ArraySorter();
+            /*ArraySorter sorter = new ArraySorter();
 
             string algorithm;
-            string elapsedTime;
+            string elapsedTime;*/
 
-            algorithm = "Insertion sort";
+            /*algorithm = "Insertion sort";
             elapsedTime = sorter.Sort(algorithm);
             Console.WriteLine($"{algorithm}: {elapsedTime}");
 
@@ -25,7 +25,11 @@ namespace DataStructuresAndAlgorithms
 
             algorithm = "Merge sort";
             elapsedTime = sorter.Sort(algorithm);
-            Console.WriteLine($"{algorithm}: {elapsedTime}");
+            Console.WriteLine($"{algorithm}: {elapsedTime}");*/
+
+            int[] array = { 1, 5, 7, 8, 10 };
+            LinkedList<int> llist = new LinkedList<int>(array);
+            llist.TraverseList();
         }
     }
 }
