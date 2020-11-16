@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace DataStructuresAndAlgorithms
 {
@@ -29,7 +30,10 @@ namespace DataStructuresAndAlgorithms
 
             int[] array = { 1, 5, 7, 8, 10 };
             LinkedList<int> llist = new LinkedList<int>(array);
-            llist.TraverseList();
+            llist.PrintList();
+            List<string> nodeIds = llist.GetAllIds();
+            llist.DeleteList();
+            llist.PrintList();
         }
     }
 }
