@@ -30,9 +30,7 @@ namespace DataStructuresAndAlgorithms
 
             int[] array = { 1, 5, 7, 8, 10 };
             LinkedList<int> llist = new LinkedList<int>(array);
-            llist.PrintList();
-            List<string> nodeIds = llist.GetAllIds();
-            llist.DeleteList();
+            llist.ReverseListRecursive(llist.Head);
             llist.PrintList();
         }
     }

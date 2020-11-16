@@ -182,5 +182,37 @@ namespace DataStructuresAndAlgorithms
             }
         }
     
+        public void ReverseListIterative()
+        {
+            Node<T> prev = null, curr = Head, next = null;
+
+            while (curr != null)
+            {
+                next = curr.Next;
+
+                curr.Next = prev;
+
+                prev = curr;
+                curr = next;
+            }
+
+            Head = prev;
+        }
+
+        public Node<T> ReverseListRecursive(Node<T> head)
+        {
+            if (head == null || head.Next == null)
+                return head;
+
+            // Reverse the list and put the first element at the end
+            Node<T> rest = ReverseListRecursive(head.Next);
+            head.Next.Next = head;
+            
+            head.Next = null;
+            Head = rest;
+
+            //Fix the head pointer
+            return rest;
+        }
     }
 }
